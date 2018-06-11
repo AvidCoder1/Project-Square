@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ----TODO----
 -walls
 enemy characters
@@ -19,4 +20,27 @@ bosses
 leaderboards
 characters
 jump key
+=======
+----TODO----
+-walls
+enemy characters
+*actions
+*pc port
+-inventory
+npcs
+-background
+animations
+dialouge
+
+----COOL----
+music
+shops
+dimensions
+tablet computer
+better menu
+bosses
+leaderboards
+characters
+jump key
+>>>>>>> d458957b84edabf4c39f22d0e09408781f742ffe
 extra 3d layer
