@@ -1,0 +1,22 @@
+----TODO----
+-walls
+enemy characters
+*actions
+*pc port
+-inventory
+npcs
+-background
+animations
+dialouge
+
+----COOL----
+music
+shops
+dimensions
+tablet computer
+better menu
+bosses
+leaderboards
+characters
+jump key
+extra 3d layer
