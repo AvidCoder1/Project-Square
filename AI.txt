@@ -1,0 +1,7 @@
+methods:
+	Lookout
+	Dialouge
+	Walk Around
+	Attack
+	Pathfind
+	

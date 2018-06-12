@@ -1,76 +1,21 @@
-<<<<<<< HEAD
 void levelOne() {
-  arrowAllow = true;
   //prereq
-  background(10, 255, 100);
   inLevel = true;
-  showCharacter();
-  arrowControl();
+  levelOverlays();
   
-  float mult = width-256/255;
+  //Level Code: Horizontal#:Vertical# (m = Middle) (u = Up) (d = Down) (r = Right) (l = Left) Followed by # of Times Moved in that Direction
   
-  //Objects
-  tint(255, 255);
-  //wall(blueLvl*6+playerWidth+10, height/2, 256, 256, brick);
-  
-  //UI Elements
-  if(transButton(width - 100, 0, 100, 100, 100) == true) {
-    previousGamestate = 6;
-    gamestate = 5;
+  //m:m
+  if(levelPosition("m", 0, "m", 0)) {
+    if(inArea(x, y, playerWidth, playerHeight, width/2, height/4, (width/2) + 50, (height/4) + 50)) {
+      dialogue("Ahh, I see you have discovered the first", "of the mobius! This will be documented!", "Well, carry on...", "");
+    }
+    itemPickup(width/2, 0, stick, 200, 200, "stick");
+  }
+  //m:u1
+  if(levelPosition("m", 0, "u", 1)) {
+     itemPickup(width/2, height/4, brick, 64, 64, "brick");
   }
   
-  if(inArea(width/2, height/4, (width/2) + 50, (height/4) + 50)) {
-    dialogue("Ahh, I see you have discovered the first", "of the mobius! This will be documented!", "Well, carry on...", "");
-  }
-  
-  if(keyz[7] == true) {
-    action(selSlot);
-  }
-  if(keyz[8] == true) {
-    drop(selSlot);
-  }
-  
-  itemPickup(width/2, 0, stick, 200, 200, "stick");
-  
-  showInventory();
-  
-  //1600 : 900
-=======
-void levelOne() {
-  arrowAllow = true;
-  //prereq
-  background(10, 255, 100);
-  inLevel = true;
-  showCharacter();
-  arrowControl();
-  
-  float mult = width-256/255;
-  
-  //Objects
-  tint(255, 255);
-  //wall(blueLvl*6+playerWidth+10, height/2, 256, 256, brick);
-  
-  //UI Elements
-  if(transButton(width - 100, 0, 100, 100, 100) == true) {
-    previousGamestate = 6;
-    gamestate = 5;
-  }
-  
-  if(inArea(width/2, height/4, (width/2) + 50, (height/4) + 50)) {
-    dialogue("Ahh, I see you have discovered the first", "of the mobius! This will be documented!", "Well, carry on...", "");
-  }
-  
-  if(keyz[7] == true) {
-    action(selSlot);
-  }
-  if(keyz[8] == true) {
-    drop(selSlot);
-  }
-  
-  itemPickup(width/2, 0, stick, 200, 200, "stick");
-  
-  showInventory();
-  
-  //1600 : 900
->>>>>>> d458957b84edabf4c39f22d0e09408781f742ffe
+  text("Horizontal: " + levelPosH + " Horizontal Dir: " + levelDirH + " Vertical: " + levelPosV + " Vertical Dir: " + levelDirV, 0, height-40);
 }
